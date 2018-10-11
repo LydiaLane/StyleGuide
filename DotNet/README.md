@@ -6,8 +6,9 @@
 # UNiDAYS DotNet Coding Style Guide
 
 [DotNet Code Styles](#DotNet-code-styles)
-    * [Usings](#usings)
-    * [Namespaces](#namespaces)
+  * [Usings](#usings)
+  * [Namespaces](#namespaces)
+  * [Classes](#classes)
 
 
 
@@ -27,6 +28,35 @@ Namespaces are put after the usings.  Braces on new lines
 namespace UD.Core
 {
 
+}
+```
+### Classes
+
+- They are sealed by default
+- Internal (no explicit modifier) by default
+- Braces on new lines
+- No Line Wrapping for extends or implements (`:`)
+- Ordering of contents
+    - Private Members
+    - Public Members
+    - Constructors
+    - Public and Private Methods in a logical order
+    - Interface implementations in the same order as on the interface
+
+```cs
+[Attribute]
+[Attribute]
+sealed class StyleGuide : IDisposable
+{
+    string anExamplePrivateField;
+    public string AnExamblePublicField;
+    public string PublicProperty {get; set;}
+    string getter => "example;";
+
+    public void StyleGuide()
+    {
+
+    }
 }
 ```
 
